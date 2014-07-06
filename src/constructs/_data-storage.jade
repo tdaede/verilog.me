@@ -1,4 +1,19 @@
 div.col-md-12
   h2 Data Storage
-  p Verilog requires you to declare how data will be stored before storing it. There are many different ways to store and access data in Verilog.
-  h3 Test
+  p Verilog requires you to declare how data will be stored before storing it. There are many different ways to store and access data in Verilog. The most important difference between data storage in Verilog and other languages is that Verilog is designed for digital simulation and logic connection, so it requires you to specify the bit width of each register or net.
+  h3 Registers
+  p Verilog registers are similar to variables in other programming languages. You can assign values to and read values from registers.
+
+  p Declaring a register named <code>my_reg</code> with a width of 8 bits:
+  pre: code.language-verilog reg [7:0] my_reg;
+
+  p Declaring two registers named <code>my_reg_a</code> and <code>my_reg_b</code>, each with a width of 3 bits:
+  pre: code.language-verilog reg [2:0] my_reg_a, my_reg_b;
+
+  p Filling <code>my_reg</code> with the binary value <code>10101101</code>:
+  pre: code.language-verilog 8'b10101101
+  p Above, the prefix <code>8'b</code> signifies the following:
+  ul
+    li <code>'b</code>: The number to follow is a <strong>binary value</strong>
+    li <code>8</code>: The bit length of the following value is <strong>exactly 8 bits wide</strong>
+  p If we leave out the <code>8</code> and simply specify <code>'b10101101</code>, the compiler will assume our number is at least 8 bits and treat it as if we included a bit width prefix of <code>8</code>.
