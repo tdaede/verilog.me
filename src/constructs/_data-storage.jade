@@ -1,6 +1,7 @@
 div.col-md-12
   h2 Data Storage
   p Verilog requires you to declare how data will be stored before storing it. There are many different ways to store and access data in Verilog. The most important difference between data storage in Verilog and other languages is that Verilog is designed for digital simulation and logic connection, so it requires you to specify the bit width of each register or net.
+
   h3 Registers
   p Verilog registers are similar to variables in other programming languages. You can assign values to and read values from registers.
 
@@ -11,9 +12,21 @@ div.col-md-12
   pre: code.language-verilog reg [2:0] my_reg_a, my_reg_b;
 
   p Filling <code>my_reg</code> with the binary value <code>10101101</code>:
-  pre: code.language-verilog 8'b10101101
+  pre: code.language-verilog my_reg = 8'b10101101;
   p Above, the prefix <code>8'b</code> signifies the following:
   ul
     li <code>'b</code>: The number to follow is a <strong>binary value</strong>
     li <code>8</code>: The bit length of the following value is <strong>exactly 8 bits wide</strong>
   p If we leave out the <code>8</code> and simply specify <code>'b10101101</code>, the compiler will assume our number is at least 8 bits and treat it as if we included a bit width prefix of <code>8</code>.
+
+  h3 Nets
+  p Nets are a way to transfer data between two points. The most commonly-used net type is <code>wire</code>.
+  p Nets are different from registers in that they cannot be programatically driven—you can't put a net on the left side of an assignment statement (you can't set it to a value using <code>=</code>). For example, the following will fail to compile:
+  pre: code.language-verilog
+    | wire [7:0] my_wire;
+    | my_wire = 8'b10101101;
+  p The most common way to "get data into" a net is by using the <code>assign</code> statement. In this example, <code>output_wire</code> will always have the same value as <code>input_wire</code>:
+  pre: code.language-verilog
+    | wire [7:0] input_wire
+    | wire [7:0] output_wire;
+    | assign input_wire = output_wire;
