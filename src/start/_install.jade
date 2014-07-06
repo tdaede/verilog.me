@@ -1,0 +1,47 @@
+div.col-md-12
+  h1 Get started now.
+
+  p To start learning Verilog, you need a Verilog compiler and a code editor.
+
+  p
+    | Verilog IDEs are complex, expensive and can be confusing for beginners. Instead of using an IDE, we recommend using a text editor such as 
+    a(href="http://www.sublimetext.com/") Sublime Text
+    |  (Windows, OS X, Linux) or 
+    a(href="http://notepad-plus-plus.org/") Notepad++
+    |  (Windows) to edit Verilog code. 
+
+  p 
+    | We recommend using the free 
+    a(href="http://iverilog.icarus.com/") Icarus Verilog 
+    | compiler. Below are instructions for installing Icarus Verilog.
+
+div.col-md-12
+  h1 Installing Icarus Verilog
+
+div.col-md-12
+  h2 Windows
+  p Detailed instructions coming soon.
+
+div.col-md-12
+  h2 Mac OS X
+  ol
+    li
+      | If you already have Homebrew installed, you can skip to step 3. Otherwise, install 
+      a(href="http://brew.sh/") Homebrew
+      |  using the following command:
+      pre: code.language-bash ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    li
+      | Homebrew requires the Xcode Command Line Tools, so install those next. Run the following command in Terminal, then click "Install" and wait for the installation to complete:
+      pre: code.language-bash xcode-select --install
+    li
+      | Install Icarus Verilog using Homebrew with the following command:
+      pre: code.language-bash brew install icarus-verilog
+    li
+      | Test your Verilog installation to make sure it works:
+      pre: code.language-bash iverilog -V
+      | If you see something like the following, you're good to go:
+      pre: code: include ../code/_iverilog-version.txt
+
+div.col-md-12
+  h2 Linux
+  p Detailed instructions coming soon.

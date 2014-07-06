@@ -1,0 +1,14 @@
+extends ../_base
+
+block title
+  | The Basics
+
+block head
+  link(rel="stylesheet", href="/styles/index.css")
+
+block body
+  div.container
+    div.col-md-12
+      h1 Constructs
+      p Constructs are the basis of Verilog. A construct defines a certain type of functionality: for example, storing data, operating on data, or executing code based on data. Most Verilog programs combine several different types of constructs to implement complex functionality.
+    include _data-storage.jade

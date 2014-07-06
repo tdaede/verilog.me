@@ -1,0 +1,21 @@
+div.col-md-12
+  h1 The Basics
+  h2 What is Verilog?
+  p Verilog is a hardware description language, or HDL. Hardware description languages are used to describe and simulate digital circuits such as logic gates, memory chips, or CPUs.
+  h2 Why Verilog and not a general-purpose programming language?
+  p Simulating digital circuits can be difficult due to signal propagation delay. Electricity "flows", or propagates, at the speed of light. Inside chips, electricity propagates from one point to another within nanoseconds. But when circuits start operating at high frequencies, glitches can occur. As the time between cycles approaches the propagation delays, signals from one part of the circuit don't reach other parts of the circuit in time.
+  p Simulating the logic of a circuit without taking into account propagation delay isn't enough to simulate complex or high-speed circuits accurately. General-purpose programming languages such as Python or C could simulate  logic with circuit delays, but you would need to introduce lots of scaffolding and ensure your simulations work correctly. Verilog has this structure built-in, making circuit simulation much easier right out of the gate.
+  h2 What can I do after I learn Verilog?
+  p Verilog is commonly used to synthesize, or implement, circuit designs in field-programmable gate arrays (FPGAs). An FPGA is a set of digital logic elements that can be connected and configured using software. HDLs such as Verilog are often used to describe the connections between pins on an FPGA, then used to synthesize the design and make it a functional, real-life circuit.
+  h2 Who is this book for?
+  p This book is targeted at two groups of people:
+  ul
+    li Verilog novices who
+    ul
+      li are familiar with digital logic
+      li understand the basic process of editing and compiling code using a text editor and terminal
+      li are looking to learn Verilog for simulating digital circuits
+    li experienced users of Verilog who
+    ul
+      li want to refresh their knowledge of the language
+      li are looking for a solid Verilog reference
