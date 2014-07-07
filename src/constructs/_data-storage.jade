@@ -6,13 +6,13 @@ div.col-md-12
   p Verilog registers are similar to variables in other programming languages. You can assign values to and read values from registers.
 
   p Declaring a register named <code>my_reg</code> with a width of 8 bits:
-  pre: code.language-verilog reg [7:0] my_reg;
+  pre: code.verilog reg [7:0] my_reg;
 
   p Declaring two registers named <code>my_reg_a</code> and <code>my_reg_b</code>, each with a width of 3 bits:
-  pre: code.language-verilog reg [2:0] my_reg_a, my_reg_b;
+  pre: code.verilog reg [2:0] my_reg_a, my_reg_b;
 
   p Filling <code>my_reg</code> with the binary value <code>10101101</code>:
-  pre: code.language-verilog my_reg = 8'b10101101;
+  pre: code.verilog my_reg = 8'b10101101;
   p Above, the prefix <code>8'b</code> signifies the following:
   ul
     li <code>'b</code>: The number to follow is a <strong>binary value</strong>
@@ -22,11 +22,11 @@ div.col-md-12
   h3 Nets
   p Nets are a way to transfer data between two points. The most commonly-used net type is <code>wire</code>.
   p Nets are different from registers in that they cannot be programatically driven—you can't put a net on the left side of an assignment statement (you can't set it to a value using <code>=</code>). For example, the following will fail to compile:
-  pre: code.language-verilog
+  pre: code.verilog
     | wire [7:0] my_wire;
     | my_wire = 8'b10101101;
   p The most common way to "get data into" a net is by using the <code>assign</code> statement. In this example, <code>output_wire</code> will always have the same value as <code>input_wire</code>:
-  pre: code.language-verilog
+  pre: code.verilog
     | wire [7:0] input_wire
     | wire [7:0] output_wire;
     | assign input_wire = output_wire;
