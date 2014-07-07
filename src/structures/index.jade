@@ -1,0 +1,14 @@
+extends ../_base
+
+block title
+  | Structures
+
+block head
+  link(rel="stylesheet", href="/styles/index.css")
+
+block body
+  div.container
+    div.col-md-12
+      h1 Structures
+      p In this section, we'll explore structures people frequently create in Verilog. Many of these structures mimic commonly-used circuits in the real world. Implementing these basic circuits in Verilog can make simulation of existing circuits or new designs much easier.
+    include _d-latch.jade

@@ -1,0 +1,12 @@
+div.col-md-12
+  h1 D Latch
+  img(src="/images/d-latch.svg", alt="D latch schematic")
+  p A D latch has two inputs and one or two outputs:
+  ul
+    li E: Input.
+    li D: Input.
+    li Q: Output. On the positive edge of E, Q takes on the value of D and holds that value until the next positive edge on E.
+    li <span class="overline">Q</span>: Output. Always contains the inverse of Q. Optional.
+  p A D latch can be implemented in Verilog as follows:
+  pre: code.language-verilog
+    include ../code/_d-latch.v
