@@ -1,24 +1,109 @@
-@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic")
+@import "_mixins.styl"
+
+body_font_size = 18px
+monospace_font = "inconsolata", Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace;
+
+rounding = 4px
+
+lighter_grey = #f5f8fa
+light_grey = #ebedef
+
+darker_violet = #291954
+dark_violet = #391d5a
+mid_violet = rgba(61, 39, 100, 1)
+light_violet = #6442AB
+
+mid_violet_transp = rgba(61, 39, 100, 0.6)
+mid_violet_more_transp = rgba(61, 39, 100, 0.4)
+
+violet_blue = #363b7d
+
+light_transp = rgba(255, 255, 255, 0.1)
+white_transp = rgba(255, 255, 255, 0.85)
+bright_transp = rgba(255, 255, 255, 0.90)
 
 body
-  margin-top: 20px
+  font-family: "museo-sans", sans-serif
+  font-size: body_font_size
+  font-weight: 300
   margin-bottom: 20px
+  background-color: light_grey
+
+.page-content
+  padding-top: 20px
+  padding-bottom: 40px
+  background-color: lighter_grey
+  background-linear-gradient(top, lighter_grey, 0%, light_grey, 100%)
+
+.navbar-verilogme
+  background-color: dark_violet
+  background-linear-gradient(top, mid_violet, 0%, dark_violet, 100%)
+  box-shadow(0px -20px 40px 20px rgba(0, 0, 0, 0.2))
+  margin-bottom: 0
+  a
+    color: white_transp
+  .navbar-nav>li>a
+    &:hover, &:focus
+      background-color: light_transp
+  .navbar-toggle
+    background-color: rgba(0, 0, 0, 0.1)
+    border-color: rgba(255, 255, 255, 0.4)
+    .icon-bar
+      background-color: rgba(255, 255, 255, 0.25)
 
 .footer
-  margin-top: 40px
   text-align: center
 
+h1, h2, h3, h4, h5, h6
+  font-family: "museo-slab", sans-serif
+
+h1, h2
+  font-weight: 700
+
+h1
+  background-color: mid_violet
+  background-linear-gradient(top, violet_blue, 0%, mid_violet, 100%)
+  color: bright_transp
+  padding-top: 8px
+  padding-bottom: 8px
+  padding-left: 10px
+  padding-right: 10px
+  border-radius: 6px
+
+h2
+  color: darker_violet
+  border-bottom: 5px solid mid_violet_transp
+  padding-right: 120px
+  padding-bottom: 3px
+
+h3, h4, h5, h6
+  color: dark_violet
+  border-bottom: 3px solid mid_violet_more_transp
+  padding-right: 40px
+  font-weight: 500
+
+.jumbotron h1
+  color: bright_transp
+  display: inline-block
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: 8px
+  padding-bottom: 14px
+  &:hover
+    background-linear-gradient(top, light_violet, 0%, mid_violet, 100%)
+
 code, kbd, pre, samp
-  font-family: "Ubuntu Mono", monospace
-  font-size: 14px
-  line-height: 16px
+  font-family: monospace_font
+  font-size: body_font_size
+  line-height: body_font_size + 2px
 
 .ace_editor
-  font-family: "Ubuntu Mono", monospace !important
-  font-size: 14px !important
+  font-family: monospace_font !important
+  font-size: body_font_size !important
 
 pre, .hljs
   background-color: #f8f8f8
+  border-radius: rounding
 
 .overline
   text-decoration: overline
@@ -26,6 +111,6 @@ pre, .hljs
 .ace-verilog
   display: block
   border: 1px solid rgba(0, 0, 0, 0.2)
-  border-radius: 6px
   margin-bottom: 10px
   height: 200px
+  border-radius: rounding

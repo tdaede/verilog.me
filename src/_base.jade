@@ -15,8 +15,10 @@ html
     block head
   body
     +nav-bar()
-    block body
+    div.page-content: block body
     +footer()
+    script(src="//use.typekit.net/nzt4zlp.js")
+    script try{Typekit.load();}catch(e){}
     script(src="//code.jquery.com/jquery-2.1.1.min.js")
     script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
     script(src="/lib/highlightjs/highlight.pack.js")
