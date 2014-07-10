@@ -1,26 +1,5 @@
 @import "_mixins.styl"
-
-body_font_size = 18px
-monospace_font = "inconsolata", Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace;
-
-rounding = 4px
-
-lighter_grey = #f5f8fa
-light_grey = #ebedef
-
-darker_violet = #291954
-dark_violet = #391d5a
-mid_violet = rgba(61, 39, 100, 1)
-light_violet = #6442AB
-
-mid_violet_transp = rgba(61, 39, 100, 0.6)
-mid_violet_more_transp = rgba(61, 39, 100, 0.4)
-
-violet_blue = #363b7d
-
-light_transp = rgba(255, 255, 255, 0.1)
-white_transp = rgba(255, 255, 255, 0.85)
-bright_transp = rgba(255, 255, 255, 0.90)
+@import "_variables.styl"
 
 body
   font-family: "museo-sans", sans-serif
@@ -73,13 +52,11 @@ h1
 h2
   color: darker_violet
   border-bottom: 5px solid mid_violet_transp
-  padding-right: 120px
   padding-bottom: 3px
 
 h3, h4, h5, h6
   color: dark_violet
   border-bottom: 3px solid mid_violet_more_transp
-  padding-right: 40px
   font-weight: 500
 
 .jumbotron h1
@@ -90,7 +67,7 @@ h3, h4, h5, h6
   padding-top: 8px
   padding-bottom: 14px
   &:hover
-    background-linear-gradient(top, light_violet, 0%, mid_violet, 100%)
+    background-linear-gradient(top, light_violet_blue, 0%, mid_light_violet, 100%)
 
 code, kbd, pre, samp
   font-family: monospace_font
