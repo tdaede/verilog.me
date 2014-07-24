@@ -1,5 +1,5 @@
-@import "_mixins.styl"
-@import "_variables.styl"
+@import "_mixins"
+@import "_variables"
 
 body
   font-family: "museo-sans", sans-serif
@@ -74,20 +74,9 @@ code, kbd, pre, samp
   font-size: body_font_size
   line-height: body_font_size + 2px
 
-.ace_editor
-  font-family: monospace_font !important
-  font-size: body_font_size !important
-
 pre, .hljs
   background-color: #f8f8f8
   border-radius: rounding
 
 .overline
   text-decoration: overline
-
-.ace-verilog
-  display: block
-  border: 1px solid rgba(0, 0, 0, 0.2)
-  margin-bottom: 10px
-  height: 200px
-  border-radius: rounding

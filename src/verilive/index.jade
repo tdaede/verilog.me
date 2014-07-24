@@ -1,0 +1,35 @@
+extends ../_base
+
+block title
+  | Verilive Compiler
+
+block head
+  link(rel="stylesheet", href="/styles/verilive.css")
+
+block body
+  div.container
+    div.row
+      div.col-md-6
+        h2 Module
+        div.ace-verilog#ace-module
+          include ../code/modules/_simple.v
+      div.col-md-6
+        h2 Testbench
+        div.ace-verilog#ace-testbench
+          include ../code/testbenches/_simple.v
+    div.row
+      div.col-md-12.compile-btn-holder
+        button.btn.btn-lg.btn-verilogme.compile-btn Compile and Run
+          img.run-icon(src="/images/rabbit.png", alt="")
+    div.row
+      div.col-md-6
+        h2 Output
+        textarea.output
+      div.col-md-6
+        h2 Waveform
+        textarea.waveform
+
+block scripts
+  script(src="/lib/ace/ace.js")
+  script(src="/scripts/setup-ace.js")
+  script(src="/scripts/verilive.js")

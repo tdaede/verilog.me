@@ -1,0 +1,30 @@
+@import "_mixins"
+@import "_variables"
+
+h2
+  border: none
+  margin-bottom: 0
+
+.ace_editor
+  font-family: monospace_font !important
+  font-size: editor_font_size !important
+  display: block
+  border: editor_border_color
+  margin-bottom: 10px
+  height: 300px
+
+.compile-btn-holder
+  text-align: center
+  .compile-btn
+    float: clear
+    .run-icon
+      max-height: 24px
+      margin-left: 10px
+
+textarea
+  font-family: monospace_font
+  font-size: output_font_size
+  line-height: output_font_size
+  width: 100%
+  height: 300px
+  border: editor_border_color
