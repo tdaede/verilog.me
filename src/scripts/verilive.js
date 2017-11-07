@@ -5,7 +5,7 @@ $('.compile-btn').click(function() {
   var testbenchCode = testbenchEditor.getSession().getValue();
   var data = JSON.stringify({module: moduleCode, testbench: testbenchCode});
   $.ajax({
-    url: 'http://localhost:5000/compile',
+    url: 'http://verilog.me/compile',
     type: 'post',
     data: data,
     contentType: 'application/json',
